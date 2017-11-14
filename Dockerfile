@@ -11,9 +11,9 @@ RUN apk --update add \
     wget \
     ca-certificates \
  && cd /tmp \
- && wget -q https://downloads.rclone.org/rclone-$RCLONE_VERSION-linux-arm64.zip \
- && unzip /tmp/rclone-$RCLONE_VERSION-linux-arm64.zip \
- && cp /tmp/rclone-$RCLONE_VERSION-linux-arm64/rclone /usr/bin \
+ && wget -q https://downloads.rclone.org/rclone-$RCLONE_VERSION-linux-amd64.zip \
+ && unzip /tmp/rclone-$RCLONE_VERSION-linux-amd64.zip \
+ && cp /tmp/rclone-$RCLONE_VERSION-linux-amd64/rclone /usr/bin \
  && chown root:root /usr/bin/rclone \
  && chmod 755 /usr/bin/rclone \
  && touch /var/log/cron.log \
